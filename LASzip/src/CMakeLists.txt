@@ -85,21 +85,9 @@ endif()
 include_directories(. ../dll)
 
 add_library(laszip STATIC ${files})
+set_target_properties(laszip PROPERTIES LINK_FLAGS "-O3")
 
-install(TARGETS laszip 
+install(TARGETS laszip
 	RUNTIME DESTINATION bin/
 	ARCHIVE DESTINATION lib/
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
